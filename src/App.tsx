@@ -1,13 +1,11 @@
 import './App.scss'
-import LottieComponent from "./components/lottie/LottieComponent.tsx";
-import laptopFloating from './shared/lottie-files/laptopFloating.json'
-import confetti from './shared/lottie-files/confetti.json'
+import UserListComponent from "./components/user-list/user-list.component.tsx";
+
 
 function App() {
     return (
         <>
-            <LottieComponent loop={true} animationData={laptopFloating} />
-            <LottieComponent loop={true} animationData={confetti} containerWidth={700} containerHeight={500}/>
+            <UserListComponent/>
         </>
     )
 }
