@@ -1,11 +1,26 @@
-import './Lottie.scss'
-import Lottie from "lottie-react";
-import laptopFloating from '../../shared/lottie-files/laptopFloating.json'
+import styles from './Lottie.module.scss'
+import Lottie, {LottieComponentProps} from "lottie-react";
 
-const LottieComponent = () => {
+type LottieProps = {
+    animationData: unknown,
+    loop: boolean,
+    className?: string,
+    containerWidth?: number,
+    containerHeight?: number,
+} & LottieComponentProps
+
+const LottieComponent = (
+    {
+        animationData,
+        loop,
+        className,
+        containerWidth,
+        containerHeight,
+        ...lottieComponentProps
+    }: LottieProps) => {
     return (
-        <div className={'container'}>
-            <Lottie animationData={laptopFloating} loop={true} />
+        <div style={{width: containerWidth, height: containerHeight}} className={`${styles.container}`}>
+            <Lottie {...lottieComponentProps} animationData={animationData} loop={loop} className={className} />
         </div>
     );
 };
