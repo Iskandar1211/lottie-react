@@ -3,6 +3,5 @@
 
 .container {
   margin: 0 auto;
-  border: 1px solid $primary-color;
   @include flex-center
 }

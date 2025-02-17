@@ -1,10 +1,10 @@
 import './App.scss'
-import Lottie from "./components/lottie/Lottie.tsx";
+import LottieComponent from "./components/lottie/LottieComponent.tsx";
 
 function App() {
     return (
         <>
-            <Lottie/>
+            <LottieComponent/>
         </>
     )
 }
